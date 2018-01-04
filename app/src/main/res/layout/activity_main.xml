@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pa1.batteryindicator.MainActivity">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Battery Indicator App!"
+
+        android:id="@+id/textView" />
+
+    <ProgressBar
+        android:id="@+id/pbBattery"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:max="100"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp" />
+
+    <TextView
+        android:id="@+id/tvPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pbBattery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+        android:textSize="22dp"
+        android:text="Percent is shown here" />
+
+    <EditText
+        android:id="@+id/etPercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvPercent"
+        android:layout_marginTop="65dp"
+        android:ems="10"
+        android:hint="Battery level you want to prompt"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPercent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="Submit" />
+
+</RelativeLayout>
